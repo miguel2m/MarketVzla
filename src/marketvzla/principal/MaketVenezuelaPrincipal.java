@@ -6,6 +6,10 @@
 package marketvzla.principal;
 
 //import marketvenezuela.controlador.LoginController;
+
+import marketvzla.Controlador.LoginController;
+import marketvzla.Vista.LoginVista;
+
 //import marketvenezuela.modelo.Lugar;
 
 //import marketvenezuela.vista.LoginVista;
@@ -32,10 +36,10 @@ public class MaketVenezuelaPrincipal {
             PrincipalModel.InicirarPrincipalModel("postgres","1234","marketvenezuela","localhost:5432");
             //Lugar.llenarLugares();
             
-            //loginVista = new LoginVista();
-           // loginController = new LoginController(loginVista);
-            //loginVista.setLoginController(loginController);
-            //loginVista.MustraLogin();
+            LoginVista loginVista = new LoginVista();
+           LoginController loginController = new LoginController(loginVista);
+            loginVista.setLoginController(loginController);
+            loginVista.MustraLogin();
             
        /* } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(LoginVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
